@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<title>MWS | AbdillahSatari</title>
+	<meta name="theme-color" content="#4e5259"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="Description" content="Author: A.N. AbdillahSatari, 
+    Illustrator: Inixindo, Category: Websites, Specification: PWA">
+	<link rel="stylesheet" href="mygrid.css">
+	<link href="../manifest.json" rel="manifest">
+	<!-- import fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class='menu'>
+			<div class="item">
+				<a href="https://www.facebook.com/abdillahsatari" aria-label="Facebook" target="_blank" rel="noopener">
+					<img src="./assets/facebooky.png" alt="facebook">
+				</a>
+			</div>
+			<div class="item">
+				<a href="https://www.instagram.com/abdillahsatari/" aria-label="Instagram" target="_blank" rel="noopener">
+					<img src="./assets/instay.png" alt="isntagram">
+				</a>
+			</div>
+			<div class="item">
+				<a href="https://github.com/abdillahsatari" aria-label="Twitter" target="_blank" rel="noopener">
+					<img src="./assets/githuby.png" alt="twitter">
+				</a>
+			</div>
+		</div>
+		<div class='header'>Universitas Hasanuddin</div>
+		<div class='sidebar'>
+			<!-- <div class="foto_profil">  -->
+				<img id="profile" src="./assets/profile.jpg" alt="profile">
+			<!-- </div> -->
+			<p>abdillah satari</p>
+			<p>"stay hungry stay foolish"</p>
+			<!-- <p>sidebar</p> -->
+		</div>
+		<div class='konten' id="content">
+			<div class="subkonten">
+				<a class="content-cell" href="./project1/menghitung.html">
+					<img class="content-img" src="./assets/calchome.png" alt="calculator">
+		            <span class="content-overlay"></span>
+		            <span class="content-text">Menghitung 2 Angka</span>
+		            <!-- <p>konten 1</p> -->
+				</a>
+			</div>
+			<div class="subkonten">
+				<a class="content-cell" href="./project2/map.html">
+					<img class="content-img" src="./assets/maps.jpg" alt="maps">
+		            <span class="content-overlay"></span>
+		            <span class="content-text">Peta Kuliner</span>
+		             <!-- <p>konten 1</p> -->
+				</a>
+			</div>
+			<div class="subkonten">
+				<a class="content-cell" href="./project3/map.html">
+					<img class="content-img" src="./assets/itsme.jpg" alt="about me">
+		            <span class="content-overlay"></span>
+		            <span class="content-text">Konten 3</span>
+		             <!-- <p>konten 1</p> -->
+				</a>
+			</div>
+		</div>
+		<div class='footer'>&copy; Abdillah Satari Rahim</div>
+	</div>
+</body>
+	<script>
+		if ('serviceWorker' in navigator) {
+		  console.log("Will the service worker register?");
+		  navigator.serviceWorker.register('service-worker.js')
+		    .then(function(reg){
+		      console.log("Yes, it did.");
+		    }).catch(function(err) {
+		      console.log("No it didn't. This happened: ", err)
+		    });
+		}
+	</script> 
+</html>

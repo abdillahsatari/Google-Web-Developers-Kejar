@@ -1,0 +1,46 @@
+html, body, #map {    
+	height: 100%;    
+	width: 100vw; 
+}
+
+body {    
+	padding: 0;    
+	margin: 0; 
+}
+
+.container {    
+	display: grid;    
+	height: 100%;    
+	grid-gap: 4px;    
+	grid-template-columns: repeat(8,1fr);
+	grid-template-rows: 60% 40%; 
+} 
+
+.peta {
+	grid-column: 1/-1; 
+	} 
+.gambar {    
+	background: #33d1b6;    
+	grid-column: 1/6; 
+	} 
+.review {    
+	background: #34bcd1;    
+	grid-column:6/-1; 
+}
+
+img {
+	height: 100%;
+	width: 100%;
+}
+
+p{
+	text-align: center;
+	font-size: 100%;
+	margin: 20%;
+}
+
+span{
+	margin-left: 10px;
+	font-weight: bold;
+	top: 10px;
+}

@@ -1,0 +1,115 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html, body{
+	height: 100%;
+}
+label {
+	color: black;
+}
+.hasil label {
+	color: white;
+	margin-left: 45%;
+	font-size: 20px;
+}
+.hasil input{
+	margin-top: 50%;
+}
+select{
+	width: 100%;
+	height: 30px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text]{
+	height: 100px;
+	width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button, input[type=button] {
+	width: 90%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px;
+    margin-left: 5%;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover{
+	background-color: #45a049;
+}
+input[type=button]:hover{
+	background-color: #45a049;
+}
+
+button{
+	top: 50%;
+}
+
+.container {
+	display: grid;
+	height: 100%;
+	/*grid-template-columns: 100px 100px 100px 100px;*/
+	grid-template-columns:  repeat(4,1fr);
+	grid-template-rows: auto auto 50px;
+	grid-gap: 4px;
+	background: lightgreen;
+}
+
+.title {
+	background: #abacad;
+	grid-column:1/-1;
+	text-align: center;
+	padding-top: 50px;
+	color: white;
+	} 
+
+.sidebar {    
+	background: #999b9e;
+	grid-column:4/-1;  
+	} 
+.konten {    
+	background: #e0a63a;
+	grid-column: 1/4;
+	display: grid;
+	grid-gap: 4px; 
+	color: red;
+	border-radius: 4px;
+	} 
+
+.subkonten{
+	background: #f2f2f2;
+	grid-column: 1/-1;
+	text-align: center;
+	padding: 10px;
+	color: white;
+}
+
+#message{
+	color: white;
+	font-size: 60px;
+	/*padding-top: 20px;*/
+	text-align: center;
+}
+
+.footer {    
+	background: #4e5259; 
+	grid-column:1/-1; 
+	text-align: center;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+	padding: 14px;
+}

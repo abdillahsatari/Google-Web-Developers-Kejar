@@ -1,0 +1,40 @@
+{ "employes" : [
+	
+	{
+		"nama":"Bran",
+		"jabatan":"IT"	
+	}
+]}
+
+// { "places": [     
+// 	{	
+// 		"lokasi": [-5.149640, 119.438319], 
+// 		"sponsor" : "Marugame Udon", 
+// 		"gambar":"images/planB.jpg",
+// 		"review": "Rumah Makan Udon Terlezat Senusantara"
+// 	},    
+// 	{	
+// 		"lokasi": [-5.156705, 119.444434], 
+// 		"sponsor" : "Yoshinoya", 
+// 		"gambar":"images/warkop.jpg",
+// 		"review": "Penggemar Makanan Jepang Wajib Datang Ke sini"
+// 	},    
+// 	{	
+// 		"lokasi": [-5.157553, 119.438371], 
+// 		"sponsor" : "Pondok Ikan Bakar", 
+// 		"gambar":"images/ikan_bakar.jpg",
+// 		"review": "Yang suka ikan bakar tempat ini wajib untuk di kunjungi"
+// 	},    
+// 	{	
+// 		"lokasi": [-5.154828, 119.440388], 
+// 		"sponsor" : "STEAK cow", 
+// 		"gambar":"images/steak.jpg",
+// 		"review": "Steak lokal harga impor, 200gr dan 300gr mentah "
+// 	},
+// 	{	
+// 		"lokasi": [-5.160113, 119.447562], 
+// 		"sponsor" : "Rupa-rupa Seafood!!", 
+// 		"gambar":"images/seafood.jpg",
+// 		"review": "seafood international lobster, king crabs, cumi, semua ada"
+// 	} 
+// ]}

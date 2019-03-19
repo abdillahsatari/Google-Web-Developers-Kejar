@@ -1,0 +1,85 @@
+<html>
+<head>
+	<script>
+		function logFetch(url) {
+		 return fetch(url)
+		 .then(response => response.text())
+		 .then(textnya => {
+		 console.log(textnya);
+		 var myid= document.getElementById("myid");
+		 myid.contentText= textnya;
+		 })
+		 .catch(err => {
+		 console.error('fetch failed', err);
+		 });
+		}
+	</script>
+
+	<!-- async await -->
+	<script type="text/javascript">
+		async function logFetch2(url) {
+		 try {
+		 const response = await fetch(url);
+		 let teks= await response.text();
+		 console.log(teks);
+		 document.getElementById("myid2").contentText= teks;
+		 }
+		 catch (err) {
+		 console.log('fetch failed', err);
+		 }
+		} 
+	</script>
+
+	<script type="text/javascript">
+
+		function testing(){
+			// let promise1 = Promise.resolve("INIX");
+			// let promise2 = promise1.then(function(result) {
+			//  console.log(result) //logs "test promise"
+			//  return result + "INDO"
+			// });
+			// promise2.then(function(result){
+			//  console.log(result);
+			// });
+
+			// var promise1 = Promise.resolve('test promise');
+			// var promise2 = Promise.resolve({nama:"Dastan",jabatan:"manager"})
+			// var promise3 = Promise.reject('failure'); //rejected promise
+			// Promise.all([promise1,promise2])
+			//  .then(function(result) {
+			//  console.log(result) // tidak muncul, promise3 ditolak
+			// }).catch(function(error){
+			//  console.log(error) //logs 'failure.'
+			// });  
+
+			var promise1 = new Promise(function(resolve,reject){
+			 setTimeout(function(){
+			 resolve("finished in two seconds");
+			 },2000) //return setelah 2 detik
+			});
+			var promise2 = new Promise(function(resolve,reject){
+			 setTimeout(function(){
+			 resolve("Selesai dalam 3 detik");
+			 },3000) //return setelah 3 detik
+			});
+			// Mana yang paling cepat?
+			Promise.race([promise1,promise2])
+			 .then(function(result) {
+			 console.log(result)
+			}).catch(function(error){
+			 console.log(error)
+			}); 
+		}
+	</script>
+</head>
+<body>
+Test Asycn
+<p id="myid"> </p>
+<p id="myid2"> </p>
+
+<!-- <div id="myid"></div> -->
+<button onClick="logFetch('/latihan/myfile.txt');">Fetch This</button>
+<button onClick="logFetch2('/latihan/myfile.txt');">Fetch 2 here</button>
+<button onclick="testing();">test</button>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<title>Aplikasi Peta Kuliner</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" /> 
+	<link rel="stylesheet" type="text/css" href="map.css">
+	
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+	 
+
+	<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"   integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script> 
+</head>
+<body>
+	 <div class='container'>        
+	 	<div class='peta' id='mapid'> 
+	 	</div>         
+	 	<div class='gambar'>            
+	 		Gambar Disini        
+	 	</div>        
+	 	<div class='review'>Tulis review disini</div>        
+	 </div>
+
+	 <script> 
+
+	 	var mymap = L.map('mapid').setView([-5.155845, 119.445508], 14); 
+	 	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', 
+	 		{   
+	 			attribution: `Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © 
+	 			<a href="https://www.mapbox.com/">Mapbox</a>`,    
+	 			maxZoom: 20,    
+	 			id: 'mapbox.streets',    
+	 			accessToken: 'pk.eyJ1IjoiYWJkaWxsYWhzYXRhcmkiLCJhIjoiY2puenN6d29wMnB6eDNwbW9icnhiMjI3ZyJ9.XcmiBKu6gaemAxZ9krd1AA' 
+	 		}).addTo(mymap);
+
+	 	let lokasi = [-5.156678, 119.446581];
+	 	let sponsor = "Mall Panakukang";
+
+	 	let places=[
+	 		{"lokasi":[-5.153020, 119.417401], "sponsor":"Ayam Goreng Mama"},
+	 		{"lokasi":[-5.156705, 119.444434], "sponsor":"Apong Sea Food"},
+	 		{"lokasi":[-5.158233, 119.448345], "sponsor":"Sport Station"},
+	 		{"lokasi":[-5.158895, 119.449032], "sponsor":"Gramedia Mall Panakukang"},
+	 		{"lokasi":[-5.160113, 119.447562], "sponsor":"Duta Irama"}
+	 	];
+
+	 	let marker = L.marker(lokasi).addTo(mymap).bindPopup(sponsor);
+
+	 	for(var p of places){
+	 		L.marker(p.lokasi).addTo(mymap).bindPopup(p.sponsor);
+	 	}
+	</script>
+</body>
+</html>

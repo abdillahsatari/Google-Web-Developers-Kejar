@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+  <html lang="id">
+  <head>
+  	<link rel="stylesheet" href="add2numbers.css"> 
+  	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+  	<title>Menghitung 2 angka</title> 
+  	<style>   
+  		input {      
+  			font-size: large   
+  		} 
+  	</style> 
+  </head> 
+  <body> 
+  	
+  		<div class='container'>
+  			<div class="title">
+  				<h1>Tambahkan Dua angka</h1>
+  			</div>
+  			<div class="konten">
+	  			<div class='subkonten'  class="bilangan">
+	  				<label>Bilangan Pertama</label> <br>       
+	  				<input type="text" placeholder="0" />   
+		  		</div>   
+		  		<div class='subkonten operator'>       
+		  			<select name="opt" id="mySelect">
+						 <option value="tambah">  &#8380; (tambah)</option>
+						 <option value="kurang"> &#171; (kurang)</option>
+						 <option value="kali"> &#165; (kali)</option>
+						 <option value="bagi"> &#187; (bagi)</option>
+					</select>
+		  		</div>   
+		  		<div class='subkonten' class="bilangan">  
+		  			<label>Bilangan Kedua</label> <br>     
+		  			<input type="text" placeholder="0" />   
+		  		</div>
+  			</div>
+  			<div class="sidebar">
+  				<div class='hasil'> 
+  					<label>Hasil</label>      
+	  				<input type="text" placeholder="0" readonly  />   
+	  			</div><br>
+	  			<div id="span">
+	  					<p id="message"></p>
+	  			</div>
+	  			<div class='tombol'>       
+	  				<button> 
+	  					&#20803; 
+	  				</button>   
+	  			</div>
+	  				<input type="button" value="CLEAR" onClick="resetForm()" /> 
+  			</div>
+  			<div class="footer">
+  				Abdillah Satari Rahim
+  			</div>
+  		</div>
+
+  	<script src="add2numbers.js"></script> 
+  </body> 
+  </html>

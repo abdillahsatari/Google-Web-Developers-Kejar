@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<title>Aplikasi Peta Kuliner</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" /> 
+	<link rel="stylesheet" type="text/css" href="map.css">
+	
+	<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ixl+A4dHDD0DGqYW6RQ+9jxkRFclaxxQbSJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/> -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+	 
+
+	<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"   integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script> 
+</head>
+<body>
+	 <div class='container'>        
+	 	<div class='peta' id='mapid'> 
+	 	</div>         
+	 	<div class='gambar' id="gmb">        
+	 	</div>        
+	 	<div class='review' id="review">
+	 		<span>Review :</span>
+	 	</div>        
+	 </div>
+
+	 <script> 
+
+	 	var mymap = L.map('mapid').setView([-5.155845, 119.445508], 14); 
+	 	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', 
+	 		{   
+	 			attribution: `Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © 
+	 			<a href="https://www.mapbox.com/">Mapbox</a>`,    
+	 			maxZoom: 50,    
+	 			id: 'mapbox.streets',    
+	 			accessToken: 'pk.eyJ1IjoiYWJkaWxsYWhzYXRhcmkiLCJhIjoiY2puenN6d29wMnB6eDNwbW9icnhiMjI3ZyJ9.XcmiBKu6gaemAxZ9krd1AA' 
+	 		}).addTo(mymap);
+	</script>
+	<script type="text/javascript" src="map.js"></script>
+</body>
+</html>
